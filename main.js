@@ -1,5 +1,5 @@
 
-var canvas = new fabric.canvas('myCanvas');
+var canvas = new fabric.Canvas('myCanvas');
  blockY=1;
  blockX=1;
 
@@ -8,13 +8,13 @@ blockImageHeight = 430;
 
 var blockImageObj= "";
 
-function newImage(getImage)
+function new_image(getImage)
 {
 	fabric.Image.fromURL(getImage,function(Img){
-		blockImageobj=Img;
+		blockImageObj=Img;
 
-		blockImageObj.sacleToWidth(blockImageWidth);
-		blockImageObj.sacleToHeight(blockImageHeight);
+		blockImageObj.scaleToWidth(blockImageWidth); 
+		blockImageObj.scaleToHeight(blockImageHeight);
 		blockImageObj.set({
 			top:blockY,
 			left:blockX
@@ -30,7 +30,7 @@ function myKeyDown(e)
 keyPressed = e.keyCode;
 console.log(keyPressed);
 
-	if(keyPressed == '82') 
+	if(keyPressed == '69') 
 	{
 		new_image('rr1.png');
 	console.log("r");
